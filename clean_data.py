@@ -38,7 +38,7 @@ for old_path in csvfiles:
                 continue
 
             #adding participant number from filename as data column
-            line += pid_num
+            line = pid_num + ',' + line
 
             # fixing error in construction of some data rows and using
             # a numeric key to indicate a particular kind of timestamp
