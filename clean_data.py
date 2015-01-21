@@ -33,7 +33,7 @@ for old_path in csvfiles:
 
             # fixing error in construction of some data rows and using
             # a numeric key to indicate a particular kind of timestamp
-            line = line.replace("IntervalOut,X,X,", "9999,9999,9999,9999,")
+            line = line.replace("IntervalOut,X,X,", "9999,9999,9999,")
 
             #standardizing CSV: no comma at end of line
             line = line.replace(',\n', '\n')
