@@ -1,0 +1,3 @@
+CREATE DATABASE sync_db;
+CREATE USER sync_user;
+GRANT ALL PRIVILEGES ON DATABASE sync_db TO sync_user;
