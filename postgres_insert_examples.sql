@@ -26,7 +26,7 @@ SELECT * from tasktype;
 
 INSERT INTO stamp (sequence, stamp_type, instrument, 
                    micros, participant_id, tasktype_id) 
-    VALUES (1, 'input', 'right', 
+    VALUES (1, 'tap', 'right', 
             908752389, 1, 1);
 
 /*

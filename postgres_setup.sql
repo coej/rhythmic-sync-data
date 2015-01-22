@@ -46,5 +46,7 @@ CREATE TABLE taskadmin
     CONSTRAINT taskadmin_pk PRIMARY KEY(taskadmin_id)
 );
 
-
+/*
+psql -f filename.sql
+*/
 
