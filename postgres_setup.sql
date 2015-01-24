@@ -1,7 +1,23 @@
+#as superuser/postgres
+
+/*
 DROP DATABASE IF EXISTS sync_db;
 CREATE DATABASE sync_db;
+create user sync_user;
+grant all privileges on database sync_db to sync_user;
+alter user sync_user with password 'some_password';
 
-\connect sync_db --;
+psql -d sync_db -U sync_user 
+*/
+
+# Oops: shouldn't have created these tables as the postgres (super) user.
+# now we have to reassign the tables:
+# (as )
+# GRANT ALL PRIVILEGES ON TABLE participant to script_user;
+# GRANT ALL PRIVILEGES ON stamp TO script_user;
+# etc.
+
+\connect sync_db
 
 CREATE TABLE participant
 (
@@ -47,6 +63,6 @@ CREATE TABLE taskadmin
 );
 
 /*
-psql -f filename.sql
+psql -f postgres_setup.sql
 */
 
